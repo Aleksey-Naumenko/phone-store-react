@@ -1,0 +1,40 @@
+@import './styles/variables.scss';
+
+body {
+  font-family: 'Baloo Paaji 2', cursive !important;
+  background-color: $mainWhite !important;
+}
+
+.text-title {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.text-blue {
+  color: $mainBlue;
+}
+
+.text-lightBlue {
+  color: $lightBlue;
+}
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: $mainDark;
+  border-radius: 0 !important;
+  border: 0.1rem solid $mainDark !important;
+}
+
+.btn-black:hover {
+  background: $mainDark !important;
+  color: $mainWhite !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: $mainYellow;
+}
