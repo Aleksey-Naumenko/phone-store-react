@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PayPalButton from './PaypalButton';
 
-const CartTotals = ({ value }) => {
+const CartTotals = ({ value, history }) => {
   const { cartSubTotal, cartTax, cartTotal, clearCart } = value;
   return (
     <>
       <div className="container">
         <div className="row">
-          <div className="col-10 mt-2 ml-sm-5 ml-auto col-sm-8 text-capitalize text-right">
+          <div className="col-10 mt-2 ml-sm-5 mx-auto col-sm-8 text-capitalize text-right">
             <Link to="/">
               <button
                 className="btn btn-outline-danger text-uppercase mb-3 px-5"
@@ -29,6 +30,7 @@ const CartTotals = ({ value }) => {
               <span className="text-title">total :</span>
               <strong>$ {cartTotal}</strong>
             </h5>
+            <PayPalButton total={cartTotal} clearCart={clearCart} history={history} />
           </div>
         </div>
       </div>
